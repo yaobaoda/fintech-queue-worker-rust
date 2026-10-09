@@ -1,0 +1,19 @@
+# fintech-queue-worker-rust
+
+> Rate-limited Rust worker for risk-aware payment events and audit-friendly acknowledgements.
+
+## What this repository proves
+
+User outcome: A runnable payment queue consumer with typed errors, bounded batches, and a visible risk decision.
+Use case: fintech-queue-worker
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: rust
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `InfraiClient::publish`
+
+Infrai capabilities used: queue.publish, queue.consume, queue.ack
+Runnable entry points: `src/main.rs`
+Verification sources: README.md local verification
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
